@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="float: left;">Health Profile</ion-title>
+    <ion-button style="float: right;" (click)="logout()">
+      logout
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Personal Info</div>
+          <div class="panel-body">
+            <ul>
+              <li>Name: {{ patientHealthInfo?.PersonalInfo.Name }} </li>
+              <li>Email: {{ patientHealthInfo?.PersonalInfo.Email }} </li>
+              <li>Phone: {{ patientHealthInfo?.PersonalInfo.Phone }} </li>
+              <li>Age: {{ patientHealthInfo?.PersonalInfo.Age }} </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Medical Condition</div>
+          <div class="panel-body">
+            <ul>
+              <li>Heart Disease: {{ patientHealthInfo?.MedicalCondition.HeartDisease ? 'Yes': 'No' }} </li>
+              <li>Diabetics: {{ patientHealthInfo?.MedicalCondition.Diabetics ? 'Yes': 'No' }} </li>
+              <li>BloodPressure: {{ patientHealthInfo?.MedicalCondition.BloodPressure.HighBP ? 'Yes': 'No' }} </li>
+              <li>BloodPressure: {{ patientHealthInfo?.MedicalCondition.BloodPressure.LowBP ? 'Yes': 'No' }} </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Health Status</div>
+          <div class="panel-body">
+            <ul>
+              <li>Height: {{ patientHealthInfo?.HealthStatus.Height }} </li>
+              <li>Weight: {{ patientHealthInfo?.HealthStatus.Weight }} </li>
+              <li>PulseRate: {{ patientHealthInfo?.HealthStatus.PulseRate }} </li>
+              <li>BP: {{ patientHealthInfo?.HealthStatus.BP }} </li>
+              <li>BMI: {{ patientHealthInfo?.HealthStatus.BMI }} </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
